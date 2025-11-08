@@ -1,0 +1,89 @@
+# ml-service/requirements.txt
+# Python dependencies for ML inference service
+
+# ============================================
+# Core ML Framework
+# ============================================
+# PyTorch - Deep learning framework
+# CPU-only version for smaller image size
+# For GPU support, use: torch==2.1.0+cu118
+torch==2.1.0
+
+# Transformers - HuggingFace library for pre-trained models
+# Provides T5, BERT, GPT models and utilities
+transformers==4.35.0
+
+# Tokenizers - Fast tokenization (Rust-based)
+# Included with transformers but pinned for stability
+tokenizers==0.15.0
+
+# ============================================
+# API Framework
+# ============================================
+# FastAPI - Modern async web framework
+# Automatic API documentation, type validation
+fastapi==0.104.1
+
+# Uvicorn - ASGI server for FastAPI
+# [standard] includes extra dependencies for production
+uvicorn[standard]==0.24.0
+
+# Pydantic - Data validation using Python type hints
+# FastAPI uses this for request/response validation
+pydantic==2.5.0
+
+# Python-multipart - For handling file uploads
+# Required if you want to accept files in API
+python-multipart==0.0.6
+
+# ============================================
+# Monitoring & Observability
+# ============================================
+# Prometheus client - Expose metrics for monitoring
+# Tracks request counts, latency, errors
+prometheus-client==0.19.0
+
+# Psutil - System and process utilities
+# Used to track CPU, memory, GPU usage
+psutil==5.9.6
+
+# ============================================
+# Caching
+# ============================================
+# Redis client for caching predictions
+# Reduces load on ML model for repeated requests
+redis==5.0.1
+
+# ============================================
+# Utilities
+# ============================================
+# Python-dotenv - Load environment variables from .env
+# Useful for local development
+python-dotenv==1.0.0
+
+# ============================================
+# Optional: Development Dependencies
+# ============================================
+# Uncomment for development:
+# pytest==7.4.3              # Testing framework
+# pytest-asyncio==0.21.1     # Async test support
+# pytest-cov==4.1.0          # Coverage reporting
+# black==23.11.0             # Code formatter
+# flake8==6.1.0              # Linter
+# mypy==1.7.1                # Type checker
+
+# ============================================
+# Version Notes
+# ============================================
+# All versions are pinned for reproducibility
+# Update periodically but test thoroughly
+#
+# To update all packages:
+# pip list --outdated
+# pip install --upgrade <package>
+#
+# To create this file from current environment:
+# pip freeze > requirements.txt
+#
+# To install:
+# pip install -r requirements.txt
