@@ -9,8 +9,8 @@ Architecture:
 - Redis for caching (optional)
 - Pydantic for request validation
 
-Author: Your Name
-Date: 2024
+Author: Bhagya Patel
+Date: November 8th, 2025
 """
 
 from fastapi import FastAPI, HTTPException, Request
