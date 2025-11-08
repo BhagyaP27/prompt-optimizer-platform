@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+venv/
+env/
+*.egg-info/
+
+# Node
+node_modules/
+npm-debug.log*
+dist/
+build/
+
+# Environment
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Models
+*.pth
+*.bin
+models/checkpoints/
+
+# Data
+data/raw/*.csv
+data/processed/*.csv
+
+# Testing
+.pytest_cache/
+.coverage
